@@ -14,8 +14,11 @@ const countSlice=createSlice({
         },
         reset:(state)=>{
             state.count=0
+        },
+        incrementByAmount:(state,actions)=>{
+            state.count+=actions.payload
         }
     }
 })
-export const {increment,decrement,reset}=countSlice.actions
+export const {increment,decrement,reset,incrementByAmount}=countSlice.actions
 export default countSlice.reducer
